@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.tectoro.user.dao.UserDao;
 import com.tectoro.user.dao.UserDaoImpl;
+import com.tectoro.user.model.UserModel;
 
 @WebServlet("/delete")
 public class DeleteUserController extends HttpServlet {
@@ -53,8 +54,9 @@ public class DeleteUserController extends HttpServlet {
 		int id = Integer.parseInt(request.getParameter("id"));
 		userDao.deleteUser(id);
 		//response.sendRedirect("list");
-		
+		UserModel model=new UserModel();
 		out.print("Delete successfull::");
+		out.print("Delete successfull::"+id+" "+model.getFname()+" "+model.getLname()+" "+model.getEmail()+" "+model.getContact());
 		
 	}
 
