@@ -11,7 +11,7 @@ public class UserDb {
 		if (connection == null || connection.isClosed()) {
 			String url = "jdbc:mysql://localhost:3306/naresh";
 			String userName = "root";
-			String password = "S@tya33N";
+			String password = "204408204";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection(url, userName, password);
 			System.out.println("Hello db");
