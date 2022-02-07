@@ -126,6 +126,7 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public boolean updateUser(UserModel userModel) throws SQLException, ClassNotFoundException {
+		System.out.println("Hello update");
 		boolean rowUpdated;
 		UserDb userdb=new UserDb();
 		try (@SuppressWarnings("static-access")
