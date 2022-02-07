@@ -106,13 +106,16 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public boolean deleteUser(int id) throws SQLException, ClassNotFoundException {
+		System.out.println(id);
 		boolean rowDeleted;
 		UserDb userdb=new UserDb();
 		try (@SuppressWarnings("static-access")
 		Connection connection =userdb.userDb();
+				
 		PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);){
-			preparedStatement.setInt(1, id);
-			rowDeleted = preparedStatement.executeUpdate() > 0;
+			System.out.println("Connection established");
+			statement.setInt(1, id);
+			rowDeleted = statement.executeUpdate() > 0;
 		
 		}
 			
