@@ -55,8 +55,8 @@ public class DeleteUserController extends HttpServlet {
 		userDao.deleteUser(id);
 		//response.sendRedirect("list");
 		UserModel model=new UserModel();
-		out.print("Delete successfull::");
-		out.print("Delete successfull::"+id+" "+model.getFname()+" "+model.getLname()+" "+model.getEmail()+" "+model.getContact());
+		out.print("Delete successfull::"+model.getId());
+		//out.print("Delete successfull::"+id+" "+model.getFname()+" "+model.getLname()+" "+model.getEmail()+" "+model.getContact());
 		
 	}
 
